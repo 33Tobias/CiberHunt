@@ -75,7 +75,7 @@ Password: admin123
 ## 📦 Setup Instructions
 
 ```bash
-git clone https://github.com/33Tobias/Ciberhunt
+git clone https://github.com/33Tobias/CiberHunt
 cd Ciberhunt
 pip install -r requirements.txt
 python app.py
