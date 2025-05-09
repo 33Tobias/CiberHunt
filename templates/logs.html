@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs de CiberHunt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #1e1e1e; color: white; }
+        pre {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            color: #0dcaf0;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-info text-center">🧾 Logs del Sistema</h2>
+    <pre>
+{% for line in lines %}
+{{ line.strip() }}
+{% endfor %}
+    </pre>
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-outline-info">Volver al Inicio</a>
+    </div>
+</div>
+</body>
+</html>
