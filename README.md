@@ -1,50 +1,50 @@
 # 🚨 CiberHunt v1.2 — Web IDS & Honeypot Simulator
 
-**CiberHunt** is a web-based Intrusion Detection System (IDS) simulation platform built with Flask. It allows you to simulate and detect common attacks, track attacker behavior, and manage IP blocking — ideal for learning cybersecurity fundamentals.
+**CiberHunt** is a lightweight yet powerful **web-based Intrusion Detection System simulator** built with Flask. It helps you understand the fundamentals of cybersecurity by simulating, detecting, and visualizing common web attacks — all through an interactive dashboard.
 
 ---
 
-## 🎯 What does it do?
+## 🎯 Core Capabilities
 
-- Detects simulated attacks:
-  - **XSS**
-  - **Phishing**
-  - **Brute-force login**
-  - **Honeypot (trap routes)**
+- 🔍 Real-time detection of:
+  - **Cross-Site Scripting (XSS)**
+  - **Phishing Attempts**
+  - **Brute-Force Logins**
+  - **Honeypot Entrapment Routes**
 
-- Automatically blocks suspicious IPs.
-- Simulates fake attacks using random IPs.
-- Includes an admin dashboard to review all events.
-
----
-
-## 🛠 Technologies Used
-
-- **Python 3** + Flask
-- **SQLite** for lightweight storage
-- **Bootstrap 5** for UI design
-- **Chart.js** for attack visualizations
-- **Werkzeug Security** (hashed login)
-- **Native Logging** for audit trails
+- 🔒 Automatic IP blocking for persistent threats
+- 🧠 Simulated attack generator with randomized IPs
+- 📊 Admin dashboard with charts, metrics, and logs
 
 ---
 
-## 🚀 Key Features (v1.2)
+## 🛠 Built With
 
-✅ Attack detection with type + severity classification  
-✅ Auto-blocking system for repeated attacker IPs  
-✅ Admin panel with visual dashboard (charts, metrics)  
-✅ Manual IP unblock feature  
-✅ Export attack data to CSV  
-✅ REST API at `/api/attacks`  
-✅ Simulate random fake attacks via `/demo`  
-✅ Secure admin login (`admin123`)  
-✅ Log viewer (`/logs`)  
-✅ Localhost is never blocked (safe dev environment)
+- **Python 3** + [Flask](https://flask.palletsprojects.com/)
+- **SQLite** — fast, embedded DB
+- **Bootstrap 5** — clean responsive UI
+- **Chart.js** — interactive visualizations
+- **Werkzeug Security** — password hashing
+- **Python logging** — attack log trails
 
 ---
 
-## 📸 Screenshots
+## 🚀 What's New in v1.2
+
+| Feature | Status |
+|--------|--------|
+| Attack Classification (Risk + Type) | ✅ |
+| Persistent IP Blocking | ✅ |
+| Fake Attack Simulator | ✅ |
+| CSV Export | ✅ |
+| Admin Log Viewer | ✅ |
+| Secure Login | ✅ |
+| REST API `/api/attacks` | ✅ |
+| Auto-ignore localhost IP | ✅ |
+
+---
+
+## 📸 UI Screenshots
 
 <table>
   <tr>
@@ -53,27 +53,26 @@
     <td align="center"><b>Honeypot</b><br><img src="screenshots/HoneyPot.png" width="250"/></td>
   </tr>
   <tr>
-    <td align="center"><b>Brute Force Login</b><br><img src="screenshots/fuerzabruta.png" width="250"/></td>
-    <td align="center"><b>XSS Detection</b><br><img src="screenshots/xss.png" width="250"/></td>
-    <td align="center"><b>Phishing Simulation</b><br><img src="screenshots/Phishing.png" width="250"/></td>
+    <td align="center"><b>Brute Force</b><br><img src="screenshots/fuerzabruta.png" width="250"/></td>
+    <td align="center"><b>XSS</b><br><img src="screenshots/xss.png" width="250"/></td>
+    <td align="center"><b>Phishing</b><br><img src="screenshots/Phishing.png" width="250"/></td>
   </tr>
 </table>
 
-
 ---
 
-## 👤 Default Admin User
+## 👤 Admin Login (Default)
 
 ```plaintext
 Username: admin
 Password: admin123
 ```
 
-> You can change this in `app.py` under the `if __name__ == '__main__'` block.
+> You can change these credentials in the `app.py` under the `__main__` block.
 
 ---
 
-## 📂 Installation
+## 📦 Setup Instructions
 
 ```bash
 git clone https://github.com/33Tobias/Ciberhunt
@@ -82,37 +81,40 @@ pip install -r requirements.txt
 python app.py
 ```
 
+Then open `http://127.0.0.1:5000` in your browser.
+
 ---
 
-## 📌 Useful Routes
+## 🌐 Routes Overview
 
-| URL | Description |
-|-----|-------------|
-| `/` | Home |
-| `/xss` | Simulate XSS |
-| `/phishing` | Simulate phishing form |
-| `/fuerza_bruta` | Simulate brute-force login |
-| `/honeypot` | Trap endpoint |
+| Route | Description |
+|-------|-------------|
+| `/` | Main homepage |
+| `/xss` | XSS test field |
+| `/phishing` | Fake phishing form |
+| `/fuerza_bruta` | Brute-force login form |
+| `/honeypot` | Fake restricted route |
 | `/admin` | Admin login |
-| `/dashboard` | Metrics and blocked IPs |
-| `/unblock/<ip>` | Unblock an IP |
-| `/logs` | View system log |
-| `/demo` | Trigger fake attack from random IP |
-| `/api/attacks` | JSON API with full attack list |
+| `/dashboard` | Attack dashboard + logs |
+| `/logs` | Real-time log view |
+| `/unblock/<ip>` | Remove IP from blocklist |
+| `/demo` | Trigger random simulated attack |
+| `/api/attacks` | JSON API with attack records |
 
 ---
 
-## 📘 Notes
+## 📌 Developer Notes
 
-- **Not for production** use — this is an educational tool.
-- Designed for ethical hacking demos, training, and self-study.
-- Can be extended with real honeypots or network hooks.
+- 💡 This tool is meant for **educational** purposes only.
+- ⚠️ Not suitable for production environments.
+- 🧪 Ideal for workshops, cybersecurity learning, and ethical hacking practice.
 
 ---
 
 ## 👨‍💻 Author
 
-Built by [@33Tobias](https://github.com/33Tobias) — Version 1.2  
-Licensed under MIT
+Developed by [@33Tobias](https://github.com/33Tobias)  
+Version **1.2** — MIT License
 
+> Feel free to fork, star, or contribute!
 
